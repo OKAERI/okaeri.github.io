@@ -35,9 +35,9 @@
     
     
     
-    <category term="react" scheme="http://example.com/tags/react/"/>
-    
     <category term="typescript" scheme="http://example.com/tags/typescript/"/>
+    
+    <category term="react" scheme="http://example.com/tags/react/"/>
     
   </entry>
   
@@ -84,9 +84,9 @@
     
     
     
-    <category term="react" scheme="http://example.com/tags/react/"/>
-    
     <category term="typescript" scheme="http://example.com/tags/typescript/"/>
+    
+    <category term="react" scheme="http://example.com/tags/react/"/>
     
   </entry>
   
