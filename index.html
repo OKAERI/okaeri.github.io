@@ -1,0 +1,478 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd"><html><head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+  
+  
+  <title>  Lemon's blog </title>
+
+ 
+  
+    <link rel="icon" href="/images/favicon.png">
+  
+
+
+  
+<link rel="stylesheet" href="/nayo.min.css">
+ 
+<meta name="generator" content="Hexo 6.2.0"></head>  
+  <body>   
+    
+      <header class="header">
+	
+  <nav class="header-inner">        
+
+    <span class="iconfont icon-menu mobile-toggle"></span>   	
+
+    <div class="header-logo">
+      <a href="/">
+        <img class="header-logo-img" src="/images/logo.png">
+      </a>
+    </div>
+
+    <div class="header-menu">          
+              
+          
+            <a class="header-menu-link" id="header-menu-home" href="/">
+              <i class="iconfont icon-home">  
+            </i></a><i class="iconfont icon-home">     
+          
+              
+          
+            <a class="header-menu-link" id="header-menu-archives" href="/archives">
+              <i class="iconfont icon-archives">  
+            </i></a><i class="iconfont icon-archives">     
+          
+              
+          
+            <a class="header-menu-link" id="header-menu-tags" href="/tags">
+              <i class="iconfont icon-tags">  
+            </i></a><i class="iconfont icon-tags">     
+          
+              
+          
+            <a class="header-menu-link" id="header-menu-about" href="/about">
+              <i class="iconfont icon-about">  
+            </i></a><i class="iconfont icon-about">     
+          
+              
+          
+              <a class="header-menu-link" id="header-menu-search">
+                <i class="iconfont icon-search">  
+              </i></a><i class="iconfont icon-search">
+          
+                  
+    </i></i></i></i></i></div><i class="iconfont icon-home"><i class="iconfont icon-archives"><i class="iconfont icon-tags"><i class="iconfont icon-about"><i class="iconfont icon-search">  
+    
+  </i></i></i></i></i></nav><i class="iconfont icon-home"><i class="iconfont icon-archives"><i class="iconfont icon-tags"><i class="iconfont icon-about"><i class="iconfont icon-search">
+</i></i></i></i></i></header><i class="iconfont icon-home"><i class="iconfont icon-archives"><i class="iconfont icon-tags"><i class="iconfont icon-about"><i class="iconfont icon-search">
+
+   
+
+      <div class="container">       
+          
+          
+            <div class="container-inner">  
+          
+
+          
+
+
+
+
+<div class="profile sildeUpMin">
+	
+		<img class="avatar" src="/images/header.jpg">
+
+		<p class="author">Lemon</p>
+		
+		<div class="social">
+   		      	
+			<a target="_blank" class="social-links" href="https://github.com/Lemonreds/hexo-theme-nayo">		
+				<i class="iconfont icon-Github">
+			</i></a><i class="iconfont icon-Github">	
+	          	
+			<a target="_blank" class="social-links" href>		
+				<i class="iconfont icon-Weibo">
+			</i></a><i class="iconfont icon-Weibo">	
+	          	
+			<a target="_blank" class="social-links" href>		
+				<i class="iconfont icon-Facebook">
+			</i></a><i class="iconfont icon-Facebook">	
+	          	
+			<a target="_blank" class="social-links" href>		
+				<i class="iconfont icon-Instagram">
+			</i></a><i class="iconfont icon-Instagram">	
+	          	
+			<a target="_blank" class="social-links" href>		
+				<i class="iconfont icon-Neteasemusic">
+			</i></a><i class="iconfont icon-Neteasemusic">	
+	    
+    	</i></i></i></i></i></div><i class="iconfont icon-Github"><i class="iconfont icon-Weibo"><i class="iconfont icon-Facebook"><i class="iconfont icon-Instagram"><i class="iconfont icon-Neteasemusic">		
+</i></i></i></i></i></div><i class="iconfont icon-Github"><i class="iconfont icon-Weibo"><i class="iconfont icon-Facebook"><i class="iconfont icon-Instagram"><i class="iconfont icon-Neteasemusic">
+
+
+    	  	
+  		
+    			
+
+<article class="article">		
+	   
+	<div class="article-header">
+	    
+		<a class="article-title" href="/2022/08/10/React-%E7%BB%84%E4%BB%B6%E7%B1%BB%E5%9E%8B%E5%AE%9A%E4%B9%89%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9AJSX-Element-vs-ReactNode-vs-ReactElement/">React 组件类型定义的区别：JSX.Element vs ReactNode vs ReactElement</a>  
+	       
+		 
+
+		<div class="article-meta">
+			<time>Aug 10, 2022</time>			
+		</div>
+	</div>
+
+
+	
+
+    
+	<div class="typo article-excerpt">	
+		 
+			<p>###组件类型定义<br>很多人可能在使用 TypeScript 编写 React 应用的时候会对三种不同的函数返回值类型产生困惑，不明白它们之间的区别以及应该什么时候使用哪一种类型才比较严谨。</p>
+<p>ReactElement 是含有 props 和 type 属性的对象：</p>
+<figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">type <span class="title class_">Key</span> = string | number</span><br><span class="line"></span><br><span class="line">interface <span class="title class_">ReactElement</span><P = any, T <span class="keyword">extends</span> string | <span class="title class_">JSXElementConstructor</span><any> = string | <span class="title class_">JSXElementConstructor</span><any>> {</span><br><span class="line">  <span class="attr">type</span>: T;</span><br><span class="line">  <span class="attr">props</span>: P;</span><br><span class="line">  <span class="attr">key</span>: <span class="title class_">Key</span> | <span class="literal">null</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<p>ReactNode 则是多种类型的集合：</p>
+<figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">type <span class="title class_">ReactText</span> = string | number;</span><br><span class="line">type <span class="title class_">ReactChild</span> = <span class="title class_">ReactElement</span> | <span class="title class_">ReactText</span>;</span><br><span class="line"></span><br><span class="line">interface <span class="title class_">ReactNodeArray</span> <span class="keyword">extends</span> <span class="title class_">Array</span><<span class="title class_">ReactNode</span>> {}</span><br><span class="line">type <span class="title class_">ReactFragment</span> = {} | <span class="title class_">ReactNodeArray</span>;</span><br><span class="line"></span><br><span class="line">type <span class="title class_">ReactNode</span> = <span class="title class_">ReactChild</span> | <span class="title class_">ReactFragment</span> | <span class="title class_">ReactPortal</span> | boolean | <span class="literal">null</span> | <span class="literal">undefined</span>;</span><br></pre></td></tr></tbody></table></figure>
+
+<p>类组件的 render 成员函数会返回 ReactNode 类型的值，而且 PropsWithChildren 类型中指定的 children 类型也是 ReactNode。</p>
+<figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title class_">Comp</span>: <span class="title class_">FunctionComponent</span> = <span class="function"><span class="params">props</span> =></span> <span class="language-xml"><span class="tag"><<span class="name">div</span>></span>{props.children}<span class="tag"></<span class="name">div</span>></span></span> </span><br><span class="line"><span class="comment">// children?: React.ReactNode</span></span><br><span class="line"></span><br><span class="line">type <span class="title class_">PropsWithChildren</span><P> = P & {</span><br><span class="line">  children?: <span class="title class_">ReactNode</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<p>虽然 React 的类型定义看起来写得很复杂，但它实际上等价于：</p>
+<figure class="highlight typescript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> <span class="title class_">ReactNode</span> = {} | <span class="literal">null</span> | <span class="literal">undefined</span>;</span><br></pre></td></tr></tbody></table></figure>
+<p>由于 {} 是所有对象的原型，你可以把几乎任何类型赋值给 ReactNode，但绝大多数情况下应该对它进行更详细的类型声明。</p>
+<p>JSX.Element 通过执行 React.createElement 或是转译 JSX 获得。</p>
+<figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> jsx = <span class="language-xml"><span class="tag"><<span class="name">div</span>></span>hello<span class="tag"></<span class="name">div</span>></span></span></span><br><span class="line"><span class="keyword">const</span> ele = <span class="title class_">React</span>.<span class="title function_">createElement</span>(<span class="string">"div"</span>, <span class="literal">null</span>, <span class="string">"hello"</span>);</span><br><span class="line"><p> // <- ReactElement = JSX.Element</span><br><span class="line">  <Custom> // <- ReactElement = JSX.Element</span><br><span class="line">    {true && "test"} // <- ReactNode</span><br><span class="line">  </Custom></span><br><span class="line"></p></span><br></pre></td></tr></tbody></table></figure>
+<p>JSX 是一个全局的命名空间，不同的库对 JSX 都可以有自己不同的实现，而 React 的实现方式就是让 JSX.Element 等价于 ReactElement，同时将它的泛型 props 和 type 都设为 any：</p>
+<figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">declare <span class="variable language_">global</span> {</span><br><span class="line">  namespace <span class="variable constant_">JSX</span> {</span><br><span class="line">    interface <span class="title class_">Element</span> <span class="keyword">extends</span> <span class="title class_">React</span>.<span class="property">ReactElement</span><any, any> { }</span><br><span class="line">  }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<p>####返回类型的不同<br>有的同学可能会注意到：类组件渲染方法的返回值类型和函数组件的是不一样的，这是因为目前版本的 TypeScript 类型定义并不能准确地限定 React 实际值的范围：</p>
+<p>类组件类型定义：通过 render() 返回 ReactNode，比 React 的实际值范围更宽松<br>函数组件类型定义：返回 JSX.Element，也比 React 的实际值范围更宽松<br>实际上 React 类组件中的 render() 和函数组件的返回类型是一样的，而 TypeScript 只是出于历史原因和向后兼容需要，为不同种类的组件声明了不同的返回值类型。</p>
+<p>根据 <a target="_blank" rel="noopener" href="https://reactjs.org/docs/react-component.html#render">文档的规定</a> 我们可以为组件返回值给出准确的类型定义：</p>
+<figure class="highlight typescript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> <span class="title class_">ComponentReturnType</span> = <span class="title class_">ReactElement</span> | <span class="title class_">Array</span><<span class="title class_">ComponentReturnType</span>> | <span class="built_in">string</span> | <span class="built_in">number</span> | <span class="built_in">boolean</span> | <span class="literal">null</span></span><br><span class="line"><span class="comment">// 注意: 不能传入 undefined</span></span><br></pre></td></tr></tbody></table></figure>
+
+
+<p>参考资料：<br>1.<a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/58123398/when-to-use-jsx-element-vs-reactnode-vs-reactelement">英文原文</a><br>2.<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/353239684">中文原文</a></p>
+
+		  	  
+	</div>
+
+	<div class="article-tags">
+		
+			<i class="iconfont icon-tags" style="margin-right:4px"></i>
+			            
+				<a class="article-tag" href="/tags/react/">react</a>           
+			            
+				<a class="article-tag" href="/tags/typescript/">typescript</a>           
+			
+		
+	</div>
+
+	<div class="article-bottom">
+		<a class="article-readmore" href="/2022/08/10/React-%E7%BB%84%E4%BB%B6%E7%B1%BB%E5%9E%8B%E5%AE%9A%E4%B9%89%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9AJSX-Element-vs-ReactNode-vs-ReactElement/">Continue</a> 	
+	</div>	
+    
+</article>     
+     	
+    	  	
+  		
+    			
+
+<article class="article">		
+	   
+	<div class="article-header">
+	    
+		<a class="article-title" href="/2022/08/08/TypeScript-TS2532-%E5%AF%B9%E8%B1%A1%E5%8F%AF%E8%83%BD%E6%9C%AA%E5%AE%9A%E4%B9%89/">typescript TS2532 对象可能未定义</a>  
+	       
+		 
+
+		<div class="article-meta">
+			<time>Aug 08, 2022</time>			
+		</div>
+	</div>
+
+
+	
+
+    
+	<div class="typo article-excerpt">	
+		 
+			<p>问题：</p>
+<figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="attr">arrayTemp</span>: string[] = [];</span><br><span class="line"><span class="comment">//   此时 objectArrayValue 会报 TS2532 对象可能未定义 的错误。</span></span><br><span class="line">arrayTemp.<span class="title function_">push</span>(...arrayTemp, ...objectArrayValue[<span class="number">0</span>])</span><br></pre></td></tr></tbody></table></figure>
+
+<p>解决方案</p>
+<figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="attr">arrayTemp</span>: string[] = [];</span><br><span class="line"><span class="keyword">const</span> objectArrVal = objectArrayValue.<span class="property">length</span> ? objectArrayValue[<span class="number">0</span>] : [];</span><br><span class="line">arrayTemp.<span class="title function_">push</span>(...arrayTemp, ...objectArrVal)</span><br></pre></td></tr></tbody></table></figure>
+		  	  
+	</div>
+
+	<div class="article-tags">
+		
+			<i class="iconfont icon-tags" style="margin-right:4px"></i>
+			            
+				<a class="article-tag" href="/tags/typescript/">typescript</a>           
+			
+		
+	</div>
+
+	<div class="article-bottom">
+		<a class="article-readmore" href="/2022/08/08/TypeScript-TS2532-%E5%AF%B9%E8%B1%A1%E5%8F%AF%E8%83%BD%E6%9C%AA%E5%AE%9A%E4%B9%89/">Continue</a> 	
+	</div>	
+    
+</article>     
+     	
+    	  	
+  		
+    			
+
+<article class="article">		
+	   
+	<div class="article-header">
+	    
+		<a class="article-title" href="/2022/08/08/%E4%B8%8D%E8%83%BD%E5%B0%86%E7%B1%BB%E5%9E%8B%22Timeout%22%E5%88%86%E9%85%8D%E7%BB%99%E7%B1%BB%E5%9E%8B%22number%22/">不能将类型"Timeout"分配给类型"number"</a>  
+	       
+		 
+
+		<div class="article-meta">
+			<time>Aug 08, 2022</time>			
+		</div>
+	</div>
+
+
+	
+
+    
+	<div class="typo article-excerpt">	
+		 
+			<p>今天在整理旧代码时碰到了一个TS报错，描述是 *不能将类型”Timeout”分配给类型”number”*，</p>
+<p>解决方案：<br>根据不同的运行平台，给与使用方法添加不同的<em>父级对象</em>。<br>如果是运行在服务器端Node.js，请使用：</p>
+<figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="attr">timeout</span>: <span class="title class_">NodeJS</span>.<span class="property">Timeout</span>;</span><br><span class="line"><span class="variable language_">global</span>.<span class="built_in">clearTimeout</span>(timeout);</span><br><span class="line">timeout = <span class="variable language_">global</span>.<span class="built_in">setTimeout</span>(<span class="function">() =></span> {}, <span class="number">100</span>);</span><br></pre></td></tr></tbody></table></figure>
+
+<p>如果是运行在浏览器端，请使用:</p>
+<figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="attr">timeout</span>: number;</span><br><span class="line"><span class="variable language_">window</span>.<span class="built_in">clearTimeout</span>(timeout);</span><br><span class="line">timeout = <span class="variable language_">window</span>.<span class="built_in">setTimeout</span>(<span class="function">() =></span> {}, <span class="number">100</span>);</span><br></pre></td></tr></tbody></table></figure>
+
+<p><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/45802988/typescript-use-correct-version-of-settimeout-node-vs-window">参考链接</a> </p>
+
+		  	  
+	</div>
+
+	<div class="article-tags">
+		
+			<i class="iconfont icon-tags" style="margin-right:4px"></i>
+			            
+				<a class="article-tag" href="/tags/react/">react</a>           
+			            
+				<a class="article-tag" href="/tags/typescript/">typescript</a>           
+			
+		
+	</div>
+
+	<div class="article-bottom">
+		<a class="article-readmore" href="/2022/08/08/%E4%B8%8D%E8%83%BD%E5%B0%86%E7%B1%BB%E5%9E%8B%22Timeout%22%E5%88%86%E9%85%8D%E7%BB%99%E7%B1%BB%E5%9E%8B%22number%22/">Continue</a> 	
+	</div>	
+    
+</article>     
+     	
+    	  	
+  		
+    			
+
+<article class="article">		
+	   
+	<div class="article-header">
+	    
+		<a class="article-title" href="/2022/08/01/2022%E5%B9%B4-%E6%8A%80%E6%9C%AF-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BB%E6%B8%85%E5%8D%95/">2022年 技术&学习阅读清单</a>  
+	       
+		 
+
+		<div class="article-meta">
+			<time>Aug 01, 2022</time>			
+		</div>
+	</div>
+
+
+	
+
+    
+	<div class="typo article-excerpt">	
+		 
+			<p>更新时间 2022-08-02</p>
+<p>技术</p>
+<p>进行：<br><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1ev41147DQ?p=2&vd_source=7cbefa77af3d0c53bc6a9683b58ecd90">React Hook+TypeScript『业务开发思路』</a> P2<br><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV15Y4y1z7Fc?spm_id_from=333.337.search-card.all.click&vd_source=7cbefa77af3d0c53bc6a9683b58ecd90">React Hooks 精讲</a> P6</p>
+<p>已阅：<br><a target="_blank" rel="noopener" href="https://jkchao.github.io/typescript-book-chinese/">《深入理解 TypeScript》</a> 已阅读（1次）2022-07-30<br><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1wR4y1377K?p=1&vd_source=7cbefa77af3d0c53bc6a9683b58ecd90">《小满TypeScript基础教程全集》</a> 已观看 (1次) 2022-08-09</p>
+<p>英文<br>《孙志立口语课堂》 第8节 2022-08-10</p>
+
+		  	  
+	</div>
+
+	<div class="article-tags">
+		
+			<i class="iconfont icon-tags" style="margin-right:4px"></i>
+			            
+				<a class="article-tag" href="/tags/%E5%AD%A6%E4%B9%A0/">学习</a>           
+			            
+				<a class="article-tag" href="/tags/%E6%B8%85%E5%8D%95/">清单</a>           
+			
+		
+	</div>
+
+	<div class="article-bottom">
+		<a class="article-readmore" href="/2022/08/01/2022%E5%B9%B4-%E6%8A%80%E6%9C%AF-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BB%E6%B8%85%E5%8D%95/">Continue</a> 	
+	</div>	
+    
+</article>     
+     	
+    	  	
+  		
+    			
+
+<article class="article">		
+	   
+	<div class="article-header">
+	    
+		<a class="article-title" href="/2022/07/29/%E5%BC%80%E5%8F%91-%E7%BA%BF%E4%B8%8ANode%E7%89%88%E6%9C%AC%E4%B8%8D%E4%B8%80%E8%87%B4%E5%AF%BC%E8%87%B4%E7%BA%BF%E4%B8%8A%E9%83%A8%E7%BD%B2%E8%AD%A6%E5%91%8A%E9%97%AE%E9%A2%98/">开发&线上Node版本不一致导致线上部署警告问题</a>  
+	       
+		 
+
+		<div class="article-meta">
+			<time>Jul 29, 2022</time>			
+		</div>
+	</div>
+
+
+	
+
+    
+	<div class="typo article-excerpt">	
+		 
+			<p>今天线上部署前端分支时有一个警告⚠️报错。</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm WARN read-shrinkwrap This version of npm is compatible with lockfileVersion@1, but package-lock.json was generated <span class="keyword">for</span> lockfileVersion@2. I’ll try to <span class="keyword">do</span> my best with it!</span><br></pre></td></tr></tbody></table></figure>
+
+<p>使用关键字进行搜索，发现是因为开发环境Node版本与线上环境（生产）Node版本不一致，开发环境Node版本高于线上环境（生产）Node版本,<br>报错中 <em>lockfileVersion@1</em> 是指 npm5以及npm6版本，而 <em>lockfileVersion@2</em> 是指npm7版本以上标识。</p>
+<p>NPM官方文档：<a target="_blank" rel="noopener" href="https://docs.npmjs.com/cli/v7/configuring-npm/package-lock-json#lockfileversion">package-lock-json#lockfileversion</a></p>
+<p>##解决方案：<br>1.线上环境Node升级<br>2.开发Node版本降至线上环境node版本在重新生成一下package-lock.json</p>
+<p>##不建议临时解决方案<br>1.删除 <em>node_modules</em> 以及 <em>package-lock.json</em> 并重新安装依赖</p>
+<p>参考文章<br><a target="_blank" rel="noopener" href="https://www.abrahamberg.com/blog/npm-package-json-lock-version-1-or-2/">npm-package-json-lock-version-1-or-2</a></p>
+
+		  	  
+	</div>
+
+	<div class="article-tags">
+		
+			<i class="iconfont icon-tags" style="margin-right:4px"></i>
+			            
+				<a class="article-tag" href="/tags/node/">node</a>           
+			            
+				<a class="article-tag" href="/tags/javascript/">javascript</a>           
+			            
+				<a class="article-tag" href="/tags/npm/">npm</a>           
+			
+		
+	</div>
+
+	<div class="article-bottom">
+		<a class="article-readmore" href="/2022/07/29/%E5%BC%80%E5%8F%91-%E7%BA%BF%E4%B8%8ANode%E7%89%88%E6%9C%AC%E4%B8%8D%E4%B8%80%E8%87%B4%E5%AF%BC%E8%87%B4%E7%BA%BF%E4%B8%8A%E9%83%A8%E7%BD%B2%E8%AD%A6%E5%91%8A%E9%97%AE%E9%A2%98/">Continue</a> 	
+	</div>	
+    
+</article>     
+     	
+
+
+
+
+
+          </i></i></i></i></i></div><i class="iconfont icon-Github"><i class="iconfont icon-Weibo"><i class="iconfont icon-Facebook"><i class="iconfont icon-Instagram"><i class="iconfont icon-Neteasemusic"> 
+      </i></i></i></i></i></div><i class="iconfont icon-Github"><i class="iconfont icon-Weibo"><i class="iconfont icon-Facebook"><i class="iconfont icon-Instagram"><i class="iconfont icon-Neteasemusic">            
+    
+    <a id="page-backTop">
+      <span>
+        <i class="iconfont icon-backtotop"></i>
+      </span>
+    </a> 
+
+  
+    
+    <div class="search-container sildeUpMin">
+        <div class="search-header">
+            <input type="text" placeholder="Typing Something here." id="search-input" class="search-input">
+            <span class="search-cancel">
+                <i class="iconfont icon-cancel">
+            </i></span><i class="iconfont icon-cancel">
+        </i></div><i class="iconfont icon-cancel">
+        <div id="search-result" class="search-result"></div>
+    </i></div><i class="iconfont icon-cancel">
+ 
+     <div class="mobile-menu">      
+
+      
+      <img class="mobile-menu-icon" src="/images/favicon.png">  
+      
+
+         
+            
+
+            <a class="mobile-menu-link" href="/">Home
+            </a>
+            
+         
+            
+
+            <a class="mobile-menu-link" href="/archives">Archives
+            </a>
+            
+         
+            
+
+            <a class="mobile-menu-link" href="/tags">Tags
+            </a>
+            
+         
+            
+
+            <a class="mobile-menu-link" href="/about">About
+            </a>
+            
+         
+                          
+
+            <a class="mobile-menu-link mobile-menu-search" href="#">Search </a>                 
+            
+         
+      
+</div>
+        
+    
+
+
+
+     
+    
+
+
+
+
+<footer id="footer">	    
+
+		
+		<div class="footer-copyright">
+		©
+				
+		2018-
+		
+		2022		
+	
+		Lemon
+		<br>
+
+		Theme  <a href="https://github.com/Lemonreds/hexo-theme-Nayo" target="_blank">Nayo</a>
+		</div>			
+	 
+</footer>   
+
+    
+<script src="/nayo.bundle.js"></script>
+           
+          
+</i></i></i></i></i></i></i></i></i></i></i></body></html>
