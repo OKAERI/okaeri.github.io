@@ -4,14 +4,20 @@
   <meta charset="utf-8">
   
   
-  <title>Hexo</title>
+  <title>React 组件类型定义的区别：JSX.Element vs ReactNode vs ReactElement | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/index.html">
+  <meta name="description" content="####组件类型定义很多人可能在使用 TypeScript 编写 React 应用的时候会对三种不同的函数返回值类型产生困惑，不明白它们之间的区别以及应该什么时候使用哪一种类型才比较严谨。 ReactElement 是含有 props 和 type 属性的对象： 1234567type Key &#x3D; string | numberinterface ReactElement&lt;P &#x3D; any,">
+<meta property="og:type" content="article">
+<meta property="og:title" content="React 组件类型定义的区别：JSX.Element vs ReactNode vs ReactElement">
+<meta property="og:url" content="http://example.com/2022/08/10/React-%E7%BB%84%E4%BB%B6%E7%B1%BB%E5%9E%8B%E5%AE%9A%E4%B9%89%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9AJSX-Element-vs-ReactNode-vs-ReactElement/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="####组件类型定义很多人可能在使用 TypeScript 编写 React 应用的时候会对三种不同的函数返回值类型产生困惑，不明白它们之间的区别以及应该什么时候使用哪一种类型才比较严谨。 ReactElement 是含有 props 和 type 属性的对象： 1234567type Key &#x3D; string | numberinterface ReactElement&lt;P &#x3D; any,">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-08-10T10:26:21.000Z">
+<meta property="article:modified_time" content="2022-08-10T10:50:22.690Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="react">
+<meta property="article:tag" content="typescript">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -69,9 +75,7 @@
 </header>
 
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-React-组件类型定义的区别：JSX-Element-vs-ReactNode-vs-ReactElement" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-React-组件类型定义的区别：JSX-Element-vs-ReactNode-vs-ReactElement" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2022/08/10/React-%E7%BB%84%E4%BB%B6%E7%B1%BB%E5%9E%8B%E5%AE%9A%E4%B9%89%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9AJSX-Element-vs-ReactNode-vs-ReactElement/" class="article-date">
   <time class="dt-published" datetime="2022-08-10T10:26:21.000Z" itemprop="datePublished">2022-08-10</time>
@@ -84,8 +88,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/08/10/React-%E7%BB%84%E4%BB%B6%E7%B1%BB%E5%9E%8B%E5%AE%9A%E4%B9%89%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9AJSX-Element-vs-ReactNode-vs-ReactElement/">React 组件类型定义的区别：JSX.Element vs ReactNode vs ReactElement</a>
+    <h1 class="p-name article-title" itemprop="headline name">
+      React 组件类型定义的区别：JSX.Element vs ReactNode vs ReactElement
     </h1>
   
 
@@ -128,156 +132,19 @@
     </footer>
   </div>
   
-</article>
-
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-不能将类型&#34;Timeout&#34;分配给类型&#34;number&#34;" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/08/08/%E4%B8%8D%E8%83%BD%E5%B0%86%E7%B1%BB%E5%9E%8B%22Timeout%22%E5%88%86%E9%85%8D%E7%BB%99%E7%B1%BB%E5%9E%8B%22number%22/" class="article-date">
-  <time class="dt-published" datetime="2022-08-08T02:27:55.000Z" itemprop="datePublished">2022-08-08</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/08/08/%E4%B8%8D%E8%83%BD%E5%B0%86%E7%B1%BB%E5%9E%8B%22Timeout%22%E5%88%86%E9%85%8D%E7%BB%99%E7%B1%BB%E5%9E%8B%22number%22/">不能将类型&#34;Timeout&#34;分配给类型&#34;number&#34;</a>
-    </h1>
+    <a href="/2022/08/08/%E4%B8%8D%E8%83%BD%E5%B0%86%E7%B1%BB%E5%9E%8B%22Timeout%22%E5%88%86%E9%85%8D%E7%BB%99%E7%B1%BB%E5%9E%8B%22number%22/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">不能将类型&#34;Timeout&#34;分配给类型&#34;number&#34;</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>今天在整理旧代码时碰到了一个TS报错，描述是 *不能将类型”Timeout”分配给类型”number”*，</p>
-<p>解决方案：<br>根据不同的运行平台，给与使用方法添加不同的<em>父级对象</em>。<br>如果是运行在服务器端Node.js，请使用：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="attr">timeout</span>: <span class="title class_">NodeJS</span>.<span class="property">Timeout</span>;</span><br><span class="line"><span class="variable language_">global</span>.<span class="built_in">clearTimeout</span>(timeout);</span><br><span class="line">timeout = <span class="variable language_">global</span>.<span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;&#125;, <span class="number">100</span>);</span><br></pre></td></tr></table></figure>
-
-<p>如果是运行在浏览器端，请使用:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="attr">timeout</span>: number;</span><br><span class="line"><span class="variable language_">window</span>.<span class="built_in">clearTimeout</span>(timeout);</span><br><span class="line">timeout = <span class="variable language_">window</span>.<span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;&#125;, <span class="number">100</span>);</span><br></pre></td></tr></table></figure>
-
-<p><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/45802988/typescript-use-correct-version-of-settimeout-node-vs-window">参考链接</a> </p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/08/08/%E4%B8%8D%E8%83%BD%E5%B0%86%E7%B1%BB%E5%9E%8B%22Timeout%22%E5%88%86%E9%85%8D%E7%BB%99%E7%B1%BB%E5%9E%8B%22number%22/" data-id="cl6nhqd290003wya17q7w0gi2" data-title="不能将类型&#34;Timeout&#34;分配给类型&#34;number&#34;" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/react/" rel="tag">react</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/typescript/" rel="tag">typescript</a></li></ul>
-
-    </footer>
-  </div>
   
 </article>
-
-
-
-  
-    <article id="post-2022年-技术-学习阅读清单" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/08/01/2022%E5%B9%B4-%E6%8A%80%E6%9C%AF-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BB%E6%B8%85%E5%8D%95/" class="article-date">
-  <time class="dt-published" datetime="2022-08-01T11:06:44.000Z" itemprop="datePublished">2022-08-01</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/08/01/2022%E5%B9%B4-%E6%8A%80%E6%9C%AF-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BB%E6%B8%85%E5%8D%95/">2022年 技术&amp;学习阅读清单</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>更新时间 2022-08-02</p>
-<p>技术</p>
-<p>进行：<br><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1ev41147DQ?p=2&vd_source=7cbefa77af3d0c53bc6a9683b58ecd90">React Hook+TypeScript『业务开发思路』</a> P2<br><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV15Y4y1z7Fc?spm_id_from=333.337.search-card.all.click&vd_source=7cbefa77af3d0c53bc6a9683b58ecd90">React Hooks 精讲</a> P6</p>
-<p>已阅：<br><a target="_blank" rel="noopener" href="https://jkchao.github.io/typescript-book-chinese/">《深入理解 TypeScript》</a> 已阅读（1次）2022-07-30<br><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1wR4y1377K?p=1&vd_source=7cbefa77af3d0c53bc6a9683b58ecd90">《小满TypeScript基础教程全集》</a> 已观看 (1次) 2022-08-09</p>
-<p>英文<br>《孙志立口语课堂》 第6节 2022-08-01</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/08/01/2022%E5%B9%B4-%E6%8A%80%E6%9C%AF-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BB%E6%B8%85%E5%8D%95/" data-id="cl6nhqd1w0000wya1d7b6geuz" data-title="2022年 技术&amp;学习阅读清单" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0/" rel="tag">学习</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%B8%85%E5%8D%95/" rel="tag">清单</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-开发-线上Node版本不一致导致线上部署警告问题" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/07/29/%E5%BC%80%E5%8F%91-%E7%BA%BF%E4%B8%8ANode%E7%89%88%E6%9C%AC%E4%B8%8D%E4%B8%80%E8%87%B4%E5%AF%BC%E8%87%B4%E7%BA%BF%E4%B8%8A%E9%83%A8%E7%BD%B2%E8%AD%A6%E5%91%8A%E9%97%AE%E9%A2%98/" class="article-date">
-  <time class="dt-published" datetime="2022-07-29T04:55:31.000Z" itemprop="datePublished">2022-07-29</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/javascript/">javascript</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/07/29/%E5%BC%80%E5%8F%91-%E7%BA%BF%E4%B8%8ANode%E7%89%88%E6%9C%AC%E4%B8%8D%E4%B8%80%E8%87%B4%E5%AF%BC%E8%87%B4%E7%BA%BF%E4%B8%8A%E9%83%A8%E7%BD%B2%E8%AD%A6%E5%91%8A%E9%97%AE%E9%A2%98/">开发&amp;线上Node版本不一致导致线上部署警告问题</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>今天线上部署前端分支时有一个警告⚠️报错。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm WARN read-shrinkwrap This version of npm is compatible with lockfileVersion@1, but package-lock.json was generated <span class="keyword">for</span> lockfileVersion@2. I’ll try to <span class="keyword">do</span> my best with it!</span><br></pre></td></tr></table></figure>
-
-<p>使用关键字进行搜索，发现是因为开发环境Node版本与线上环境（生产）Node版本不一致，开发环境Node版本高于线上环境（生产）Node版本,<br>报错中 <em>lockfileVersion@1</em> 是指 npm5以及npm6版本，而 <em>lockfileVersion@2</em> 是指npm7版本以上标识。</p>
-<p>NPM官方文档：<a target="_blank" rel="noopener" href="https://docs.npmjs.com/cli/v7/configuring-npm/package-lock-json#lockfileversion">package-lock-json#lockfileversion</a></p>
-<p>##解决方案：<br>1.线上环境Node升级<br>2.开发Node版本降至线上环境node版本在重新生成一下package-lock.json</p>
-<p>##不建议临时解决方案<br>1.删除 <em>node_modules</em> 以及 <em>package-lock.json</em> 并重新安装依赖</p>
-<p>参考文章<br><a target="_blank" rel="noopener" href="https://www.abrahamberg.com/blog/npm-package-json-lock-version-1-or-2/">npm-package-json-lock-version-1-or-2</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/07/29/%E5%BC%80%E5%8F%91-%E7%BA%BF%E4%B8%8ANode%E7%89%88%E6%9C%AC%E4%B8%8D%E4%B8%80%E8%87%B4%E5%AF%BC%E8%87%B4%E7%BA%BF%E4%B8%8A%E9%83%A8%E7%BD%B2%E8%AD%A6%E5%91%8A%E9%97%AE%E9%A2%98/" data-id="cl6nhqd2b0004wya1dv6850tl" data-title="开发&amp;线上Node版本不一致导致线上部署警告问题" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/" rel="tag">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/node/" rel="tag">node</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/npm/" rel="tag">npm</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
 
 
 </section>
