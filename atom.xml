@@ -44,6 +44,29 @@
   </entry>
   
   <entry>
+    <title>Typescript Pick选取 Omit排除</title>
+    <link href="http://example.com/2022/08/14/develop/Typescript-pick%E9%80%89%E5%8F%96-omit%E6%8E%92%E9%99%A4/"/>
+    <id>http://example.com/2022/08/14/develop/Typescript-pick%E9%80%89%E5%8F%96-omit%E6%8E%92%E9%99%A4/</id>
+    <published>2022-08-14T15:14:37.000Z</published>
+    <updated>2022-08-15T15:23:41.349Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="Pick（选取）"><a href="#Pick（选取）" class="headerlink" title="Pick（选取）"></a>Pick（选取）</h4><p>假设咱们有一张用户数据表，其类型如下：</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">interface <span class="title class_">User</span> &#123;  </span><br><span class="line">  uid : number;         <span class="comment">// 用户ID  </span></span><br><span class="line">  username : string;    <span class="comment">// 用户名  </span></span><br><span class="line">  password : string;    <span class="comment">// 密码  </span></span><br><span class="line">  email : string;       <span class="comment">// 邮箱  </span></span><br><span class="line">  residence : string;   <span class="comment">// 居住地  </span></span><br><span class="line">  job : string;         <span class="comment">// 职业  </span></span><br><span class="line">  sex : number;         <span class="comment">// 性别  </span></span><br><span class="line">  birthday : string;    <span class="comment">// 生日</span></span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure><p>如果我们写了一个注册接口，我们只需要传输用户名，邮箱，密码给后端。</p><p>正常的操作，我们可以写一个新的类型，并且将属性类型和表属性类型关联，这样我们只需新增或者删除类型的时候需要维护操作。</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">interface <span class="title class_">RegisterArgs</span> &#123;  </span><br><span class="line">  username : <span class="title class_">User</span>[<span class="string">&#x27;username&#x27;</span>];  </span><br><span class="line">  email : <span class="title class_">User</span>[<span class="string">&#x27;email&#x27;</span>];  </span><br><span class="line">  password : <span class="title class_">User</span>[<span class="string">&#x27;password&#x27;</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>使用Pick可以简化成</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">type <span class="title class_">RegisterArgs</span> = <span class="title class_">Pick</span>&lt;<span class="title class_">User</span>, <span class="string">&#x27;username&#x27;</span> | <span class="string">&#x27;email&#x27;</span> | <span class="string">&#x27;password&#x27;</span>&gt;</span><br></pre></td></tr></table></figure><p>我们接着将上面的例子代入下面的 Pick 的原型，会容易理解。</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">type <span class="title class_">Pick</span>&lt;T, K <span class="keyword">extends</span> keyof T&gt; = &#123;  [key <span class="keyword">in</span> k]: T[key]&#125;</span><br></pre></td></tr></table></figure><h4 id="Omit（排除）"><a href="#Omit（排除）" class="headerlink" title="Omit（排除）"></a>Omit（排除）</h4><p>还有一个接口，我想更新个人信息，除了密码不能更改之外，我们都要，但是除了uid之外都是可以缺省的，只要没有传输我们就置空。</p><p>PS：一般更改密码需要更多的权限校验，我们的场景是更新基本信息。</p><p>按照正常发展，我们会写成这样。</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 除了uid是必须的，其他都可以省略 </span></span><br><span class="line">interface <span class="title class_">UpdateUserArgs</span> &#123;  </span><br><span class="line">    uid : <span class="title class_">User</span>[<span class="string">&#x27;uid&#x27;</span>]  </span><br><span class="line">    username? : <span class="title class_">User</span>[<span class="string">&#x27;username&#x27;</span>];  </span><br><span class="line">    email? : <span class="title class_">User</span>[<span class="string">&#x27;email&#x27;</span>];  </span><br><span class="line">    residence? : <span class="title class_">User</span>[<span class="string">&#x27;residence&#x27;</span>];  </span><br><span class="line">    job? : <span class="title class_">User</span>[<span class="string">&#x27;job&#x27;</span>];  </span><br><span class="line">    sex? : <span class="title class_">User</span>[<span class="string">&#x27;sex&#x27;</span>];  </span><br><span class="line">    birthday? : <span class="title class_">User</span>[<span class="string">&#x27;birthday&#x27;</span>]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>又是一堆属性堆砌，现在我们可以使用 Omit 进行简化。</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">type <span class="title class_">UpdateUserArgs</span> = <span class="title class_">Pick</span>&lt;<span class="title class_">User</span>, <span class="string">&#x27;uid&#x27;</span>&gt; &amp; <span class="title class_">Partial</span>&lt;<span class="title class_">Omit</span>&lt;<span class="title class_">User</span>, <span class="string">&#x27;uid&#x27;</span>&gt;&gt;</span><br></pre></td></tr></table></figure><p>是不是简单多了，上面我们用 Pick 选择了 uid 保证是必须的。然后用 Omit 将 uid 排除掉 ，拿到剩下的属性，并用 Partial 将属性转为可省略。</p><p>我们看下 Omit 的原型，然后将上面的例子代入原型，就可以更好理解了。</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">type <span class="title class_">Omit</span>&lt;T, K <span class="keyword">extends</span> keyof any&gt; = <span class="title class_">Pick</span>&lt;T, <span class="title class_">Exclude</span>&lt;keyof T, K&gt;&gt;;</span><br></pre></td></tr></table></figure><p>总的来说，使用内置工具类型增加类型重复利用，让你的代码看起来就像文档一样，赏心悦目。</p><p>不过使用 Pick 还是 Omit ， 那就要看使用场景对比哪个维护成本更低。通俗来说如果需要 Pick 一堆属性，还是用 Omit 好 ，如果需要排除一堆属性，那还是用 Pick 好。</p><h5 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h5><ol><li><a href="https://blog.csdn.net/super_ying123/article/details/124465822">CSDN</a></li><li><a href="https://zhuanlan.zhihu.com/p/522017893">知乎</a></li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h4 id=&quot;Pick（选取）&quot;&gt;&lt;a href=&quot;#Pick（选取）&quot; class=&quot;headerlink&quot; title=&quot;Pick（选取）&quot;&gt;&lt;/a&gt;Pick（选取）&lt;/h4&gt;&lt;p&gt;假设咱们有一张用户数据表，其类型如下：&lt;/p&gt;
+&lt;figure class=&quot;highlig</summary>
+      
+    
+    
+    
+    
+    <category term="typescript" scheme="http://example.com/tags/typescript/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Typescript 联合类型与交叉类型的区别</title>
     <link href="http://example.com/2022/08/13/develop/Typescript-%E8%81%94%E5%90%88%E7%B1%BB%E5%9E%8B%E4%B8%8E%E4%BA%A4%E5%8F%89%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%8C%BA%E5%88%AB/"/>
     <id>http://example.com/2022/08/13/develop/Typescript-%E8%81%94%E5%90%88%E7%B1%BB%E5%9E%8B%E4%B8%8E%E4%BA%A4%E5%8F%89%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%8C%BA%E5%88%AB/</id>
@@ -86,9 +109,9 @@
     
     
     
-    <category term="react" scheme="http://example.com/tags/react/"/>
-    
     <category term="typescript" scheme="http://example.com/tags/typescript/"/>
+    
+    <category term="react" scheme="http://example.com/tags/react/"/>
     
   </entry>
   
@@ -119,8 +142,8 @@
   
   <entry>
     <title>不能将类型&quot;Timeout&quot;分配给类型&quot;number&quot;</title>
-    <link href="http://example.com/2022/08/08/develop/%E4%B8%8D%E8%83%BD%E5%B0%86%E7%B1%BB%E5%9E%8B%22Timeout%22%E5%88%86%E9%85%8D%E7%BB%99%E7%B1%BB%E5%9E%8B%22number%22/"/>
-    <id>http://example.com/2022/08/08/develop/%E4%B8%8D%E8%83%BD%E5%B0%86%E7%B1%BB%E5%9E%8B%22Timeout%22%E5%88%86%E9%85%8D%E7%BB%99%E7%B1%BB%E5%9E%8B%22number%22/</id>
+    <link href="http://example.com/2022/08/08/develop/Typescript%20%E4%B8%8D%E8%83%BD%E5%B0%86%E7%B1%BB%E5%9E%8B%22Timeout%22%E5%88%86%E9%85%8D%E7%BB%99%E7%B1%BB%E5%9E%8B%22number%22/"/>
+    <id>http://example.com/2022/08/08/develop/Typescript%20%E4%B8%8D%E8%83%BD%E5%B0%86%E7%B1%BB%E5%9E%8B%22Timeout%22%E5%88%86%E9%85%8D%E7%BB%99%E7%B1%BB%E5%9E%8B%22number%22/</id>
     <published>2022-08-08T02:27:55.000Z</published>
     <updated>2022-08-15T08:22:20.688Z</updated>
     
