@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-08-15T05:47:58.429Z</updated>
+  <updated>2022-08-15T11:23:29.833Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>opensslErrorStack: [ ‘error:03000086:digital envelope routines::initialization error’ ]</title>
+    <link href="http://example.com/2022/08/15/develop/opensslErrorStack-%E2%80%98error-03000086-digital-envelope-routines-initialization-error%E2%80%99/"/>
+    <id>http://example.com/2022/08/15/develop/opensslErrorStack-%E2%80%98error-03000086-digital-envelope-routines-initialization-error%E2%80%99/</id>
+    <published>2022-08-15T11:08:41.000Z</published>
+    <updated>2022-08-15T11:23:29.833Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><p>使用 Jenkins 对前端进行部署时，报了一个错误。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Error: error:0308010C:digital envelope routines::unsupported</span><br><span class="line">opensslErrorStack: [ &#x27;error:03000086:digital envelope routines::initialization error&#x27; ],</span><br><span class="line">library: &#x27;digital envelope routines&#x27;,</span><br><span class="line">reason: &#x27;unsupported&#x27;,</span><br><span class="line">code: &#x27;ERR_OSSL_EVP_UNSUPPORTED&#x27;</span><br></pre></td></tr></table></figure><h3 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h3><ol><li><a href="https://github.com/webpack/webpack/issues/14532#issuecomment-947525539">webpack官方仓库讨论区</a><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">在 package.js 项目启动中添加 --openssl-legacy-provider</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">  &quot;scripts&quot;: &#123;</span><br><span class="line">    &quot;build&quot;: &quot;export NODE_OPTIONS=--openssl-legacy-provider; gatsby build&quot;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li></ol><p>2.服务器端是否使用系统临时进行了升级，从而改变了SSL策略。<br><a href="https://stackoverflow.com/a/73064710/5719959">node: –openssl-legacy-provider is not allowed in NODE_OPTIONS</a></p><h4 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h4><ol><li><a href="https://exerror.com/opensslerrorstack-error03000086digital-envelope-routinesinitialization-error/">[Solved] opensslErrorStack: [ ‘error:03000086:digital envelope routines::initialization error’ ]</a></li><li><a href="https://github.com/webpack/webpack/issues/14532">nodejs 17: digital envelope routines::unsupported #14532</a></li><li><a href="https://dtuto.com/questions/7200/opensslerrorstack">opensslErrorStack: [ ‘error:03000086:digital envelope routines::initialization error’ ]</a></li></ol><h3 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h3><p>1.对之前部署成功的提交单独创建新的分支，进行部署，依然不能成功，报错！<br>2.本地进行部署，能够打包(build)成功。<br>3.更改 <em>registry</em> 配置，恢复默认为NPM包管理下载，保证包完整性。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;问题&quot;&gt;&lt;a href=&quot;#问题&quot; class=&quot;headerlink&quot; title=&quot;问题&quot;&gt;&lt;/a&gt;问题&lt;/h3&gt;&lt;p&gt;使用 Jenkins 对前端进行部署时，报了一个错误。&lt;/p&gt;
+&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;t</summary>
+      
+    
+    
+    
+    
+    <category term="javascript" scheme="http://example.com/tags/javascript/"/>
+    
+    <category term="部署" scheme="http://example.com/tags/%E9%83%A8%E7%BD%B2/"/>
+    
+    <category term="Jenkins" scheme="http://example.com/tags/Jenkins/"/>
+    
+  </entry>
   
   <entry>
     <title>Typescript 联合类型与交叉类型的区别</title>
