@@ -21,8 +21,7 @@
 <h3 id="泛型变量TKVE与显式、隐式指定"><a href="#泛型变量TKVE与显式、隐式指定" class="headerlink" title="泛型变量TKVE与显式、隐式指定"></a>泛型变量TKVE与显式、隐式指定</h3><p>范型变量：<br>T(type):表示类型<br>K(key):表示对象中键的类型<br>V（value）：表示对象中值的类型<br>E（Element）：表示元素类型<br>这些都是约定俗成的写法</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 显式指定泛型</span></span><br><span class="line"><span class="keyword">function</span> foo1&lt;T, R&gt;(<span class="attr">x</span>: T, <span class="attr">y</span>: R) &#123; &#125;</span><br><span class="line">foo1&lt;string, number&gt;(<span class="string">&#x27;111&#x27;</span>, <span class="number">2</span>); <span class="comment">// function foo1&lt;string, number&gt;(x: string, y: number): void</span></span><br><span class="line"><span class="comment">// 隐式指定泛型</span></span><br><span class="line"><span class="title function_">foo1</span>(<span class="number">22</span>, <span class="string">&#x27;111&#x27;</span>)<span class="comment">// function foo1&lt;number, string&gt;(x: number, y: string): void</span></span><br></pre></td></tr></table></figure>
 
-<p>#####参考资料</p>
-<ol>
+<h5 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h5><ol>
 <li><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_23670719/article/details/120207122">原文参考</a></li>
 <li><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_48896417/article/details/125092669">扩展参考</a></li>
 </ol>
