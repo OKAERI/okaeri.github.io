@@ -6,11 +6,11 @@ http://example.com/2022/07/29/develop/%E5%BC%80%E5%8F%91-%E7%BA%BF%E4%B8%8ANode%
 http://example.com/2022/08/08/develop/%E4%B8%8D%E8%83%BD%E5%B0%86%E7%B1%BB%E5%9E%8B%22Timeout%22%E5%88%86%E9%85%8D%E7%BB%99%E7%B1%BB%E5%9E%8B%22number%22/
 http://example.com/tags/index.html
 http://example.com/
-http://example.com/tags/%E5%AD%A6%E4%B9%A0/
-http://example.com/tags/%E6%B8%85%E5%8D%95/
 http://example.com/tags/react/
 http://example.com/tags/typescript/
 http://example.com/tags/node/
 http://example.com/tags/javascript/
 http://example.com/tags/npm/
+http://example.com/tags/%E5%AD%A6%E4%B9%A0/
+http://example.com/tags/%E6%B8%85%E5%8D%95/
 http://example.com/categories/javascript/
