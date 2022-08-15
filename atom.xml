@@ -70,7 +70,7 @@
     <link href="http://example.com/2022/08/08/develop/TypeScript-TS2532-%E5%AF%B9%E8%B1%A1%E5%8F%AF%E8%83%BD%E6%9C%AA%E5%AE%9A%E4%B9%89/"/>
     <id>http://example.com/2022/08/08/develop/TypeScript-TS2532-%E5%AF%B9%E8%B1%A1%E5%8F%AF%E8%83%BD%E6%9C%AA%E5%AE%9A%E4%B9%89/</id>
     <published>2022-08-08T09:32:42.000Z</published>
-    <updated>2022-08-10T12:13:19.879Z</updated>
+    <updated>2022-08-15T08:22:26.719Z</updated>
     
     <content type="html"><![CDATA[<p>问题：</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="attr">arrayTemp</span>: string[] = [];</span><br><span class="line"><span class="comment">//   此时 objectArrayValue 会报 TS2532 对象可能未定义 的错误。</span></span><br><span class="line">arrayTemp.<span class="title function_">push</span>(...arrayTemp, ...objectArrayValue[<span class="number">0</span>])</span><br></pre></td></tr></table></figure><p>解决方案</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="attr">arrayTemp</span>: string[] = [];</span><br><span class="line"><span class="keyword">const</span> objectArrVal = objectArrayValue.<span class="property">length</span> ? objectArrayValue[<span class="number">0</span>] : [];</span><br><span class="line">arrayTemp.<span class="title function_">push</span>(...arrayTemp, ...objectArrVal)</span><br></pre></td></tr></table></figure>]]></content>
     
@@ -86,6 +86,8 @@
     
     <category term="typescript" scheme="http://example.com/tags/typescript/"/>
     
+    <category term="typescript报错" scheme="http://example.com/tags/typescript%E6%8A%A5%E9%94%99/"/>
+    
   </entry>
   
   <entry>
@@ -93,7 +95,7 @@
     <link href="http://example.com/2022/08/08/develop/%E4%B8%8D%E8%83%BD%E5%B0%86%E7%B1%BB%E5%9E%8B%22Timeout%22%E5%88%86%E9%85%8D%E7%BB%99%E7%B1%BB%E5%9E%8B%22number%22/"/>
     <id>http://example.com/2022/08/08/develop/%E4%B8%8D%E8%83%BD%E5%B0%86%E7%B1%BB%E5%9E%8B%22Timeout%22%E5%88%86%E9%85%8D%E7%BB%99%E7%B1%BB%E5%9E%8B%22number%22/</id>
     <published>2022-08-08T02:27:55.000Z</published>
-    <updated>2022-08-15T04:50:45.816Z</updated>
+    <updated>2022-08-15T08:22:20.688Z</updated>
     
     <content type="html"><![CDATA[<p>今天在整理旧代码时碰到了一个TS报错，描述是 *不能将类型”Timeout”分配给类型”number”*，</p><h5 id="解决方案："><a href="#解决方案：" class="headerlink" title="解决方案："></a>解决方案：</h5><p>根据不同的运行平台，给与使用方法添加不同的<em>父级对象</em>。<br>如果是运行在服务器端Node.js，请使用：</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="attr">timeout</span>: <span class="title class_">NodeJS</span>.<span class="property">Timeout</span>;</span><br><span class="line"><span class="variable language_">global</span>.<span class="built_in">clearTimeout</span>(timeout);</span><br><span class="line">timeout = <span class="variable language_">global</span>.<span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;&#125;, <span class="number">100</span>);</span><br></pre></td></tr></table></figure><p>如果是运行在浏览器端，请使用:</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="attr">timeout</span>: number;</span><br><span class="line"><span class="variable language_">window</span>.<span class="built_in">clearTimeout</span>(timeout);</span><br><span class="line">timeout = <span class="variable language_">window</span>.<span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;&#125;, <span class="number">100</span>);</span><br></pre></td></tr></table></figure><p><a href="https://stackoverflow.com/questions/45802988/typescript-use-correct-version-of-settimeout-node-vs-window">参考链接</a> </p>]]></content>
     
@@ -107,9 +109,9 @@
     
     
     
-    <category term="react" scheme="http://example.com/tags/react/"/>
-    
     <category term="typescript" scheme="http://example.com/tags/typescript/"/>
+    
+    <category term="typescript报错" scheme="http://example.com/tags/typescript%E6%8A%A5%E9%94%99/"/>
     
   </entry>
   
@@ -118,7 +120,7 @@
     <link href="http://example.com/2022/08/01/life/2022%E5%B9%B4-%E6%8A%80%E6%9C%AF-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BB%E6%B8%85%E5%8D%95/"/>
     <id>http://example.com/2022/08/01/life/2022%E5%B9%B4-%E6%8A%80%E6%9C%AF-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BB%E6%B8%85%E5%8D%95/</id>
     <published>2022-08-01T11:06:44.000Z</published>
-    <updated>2022-08-15T04:50:22.547Z</updated>
+    <updated>2022-08-15T08:23:26.576Z</updated>
     
     <content type="html"><![CDATA[<p>更新时间 2022-08-02</p><h3 id="技术"><a href="#技术" class="headerlink" title="技术"></a>技术</h3><h4 id="进行："><a href="#进行：" class="headerlink" title="进行："></a>进行：</h4><p><a href="https://www.bilibili.com/video/BV1ev41147DQ?p=2&vd_source=7cbefa77af3d0c53bc6a9683b58ecd90">React Hook+TypeScript『业务开发思路』</a> P2<br><a href="https://www.bilibili.com/video/BV15Y4y1z7Fc?spm_id_from=333.337.search-card.all.click&vd_source=7cbefa77af3d0c53bc6a9683b58ecd90">React Hooks 精讲</a><br><a href="https://github.com/ascoders/weekly/tree/master/TS%20%E7%B1%BB%E5%9E%8B%E4%BD%93%E6%93%8D">TS 类型体操</a> 244</p><h4 id="已阅："><a href="#已阅：" class="headerlink" title="已阅："></a>已阅：</h4><p><a href="https://jkchao.github.io/typescript-book-chinese/">《深入理解 TypeScript》</a> 已阅读（1次）2022-07-30<br><a href="https://www.bilibili.com/video/BV1wR4y1377K?p=1&vd_source=7cbefa77af3d0c53bc6a9683b58ecd90">《小满TypeScript基础教程全集》</a> 已观看 (1次) 2022-08-09<br>TypeScript入门与实战 第三章 5.12 已弃 2022-8-11</p><h3 id="英文"><a href="#英文" class="headerlink" title="英文"></a>英文</h3><p>《孙志立口语课堂》 第8节 2022-08-10</p>]]></content>
     
