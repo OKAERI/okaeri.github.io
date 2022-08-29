@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-08-16T00:48:02.058Z</updated>
+  <updated>2022-08-29T05:55:42.725Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,13 +17,37 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Typescript 资料</title>
+    <link href="http://example.com/2022/08/17/develop/typescript/Typescript-%E8%B5%84%E6%96%99/"/>
+    <id>http://example.com/2022/08/17/develop/typescript/Typescript-%E8%B5%84%E6%96%99/</id>
+    <published>2022-08-17T13:27:53.000Z</published>
+    <updated>2022-08-29T05:55:42.725Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://jkchao.github.io/typescript-book-chinese/#why">深入理解 Typescript</a>（中文）<br><a href="https://www.typescriptlang.org/docs/handbook/typescript-from-scratch.html">Typescript 官方文档</a>（英文）<br><a href="https://ts.yayujs.com/">Typescript 中文文档</a>（冴羽版）<br><a href="https://ts.xcatliu.com/introduction/index.html">Typescript 中文文档</a>（流浪小猫版）<br><a href="https://zhongsp.gitbooks.io/typescript-handbook/content/">Typescript 中文文档</a>（Handbook）</p><p><a href="https://github.com/type-challenges/type-challenges/blob/main/README.zh-CN.md">Type Challenges</a>（TypeScript 类型体操姿势合集）<br><a href="https://github.com/ascoders/weekly/tree/master/TS%20%E7%B1%BB%E5%9E%8B%E4%BD%93%E6%93%8D">weekly&#x2F;TS 类型体操</a>（TS 类型体操精读）</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://jkchao.github.io/typescript-book-chinese/#why&quot;&gt;深入理解 Typescript&lt;/a&gt;（中文）&lt;br&gt;&lt;a href=&quot;https://www.typescriptlang.org/docs/h</summary>
+      
+    
+    
+    
+    
+    <category term="typescript" scheme="http://example.com/tags/typescript/"/>
+    
+    <category term="文档" scheme="http://example.com/tags/%E6%96%87%E6%A1%A3/"/>
+    
+  </entry>
+  
+  <entry>
     <title>opensslErrorStack: [ ‘error:03000086:digital envelope routines::initialization error’ ]</title>
     <link href="http://example.com/2022/08/15/develop/opensslErrorStack-%E2%80%98error-03000086-digital-envelope-routines-initialization-error%E2%80%99/"/>
     <id>http://example.com/2022/08/15/develop/opensslErrorStack-%E2%80%98error-03000086-digital-envelope-routines-initialization-error%E2%80%99/</id>
     <published>2022-08-15T11:08:41.000Z</published>
-    <updated>2022-08-16T00:48:02.058Z</updated>
+    <updated>2022-08-29T05:55:22.042Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><p>使用 Jenkins 对前端进行部署时，报了一个错误。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Error: error:0308010C:digital envelope routines::unsupported</span><br><span class="line">opensslErrorStack: [ &#x27;error:03000086:digital envelope routines::initialization error&#x27; ],</span><br><span class="line">library: &#x27;digital envelope routines&#x27;,</span><br><span class="line">reason: &#x27;unsupported&#x27;,</span><br><span class="line">code: &#x27;ERR_OSSL_EVP_UNSUPPORTED&#x27;</span><br></pre></td></tr></table></figure><h3 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h3><ol><li><p><a href="https://github.com/webpack/webpack/issues/14532#issuecomment-947525539">webpack官方仓库讨论区</a></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">在 package.js 项目启动中添加 --openssl-legacy-provider</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">  &quot;scripts&quot;: &#123;</span><br><span class="line">    &quot;build&quot;: &quot;export NODE_OPTIONS=--openssl-legacy-provider; gatsby build&quot;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li><li><p>服务器端是否系统进行了升级，从而改变了SSL策略。<br><a href="https://stackoverflow.com/a/73064710/5719959">node: –openssl-legacy-provider is not allowed in NODE_OPTIONS</a></p></li></ol><h4 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h4><ol><li><a href="https://exerror.com/opensslerrorstack-error03000086digital-envelope-routinesinitialization-error/">[Solved] opensslErrorStack: [ ‘error:03000086:digital envelope routines::initialization error’ ]</a></li><li><a href="https://github.com/webpack/webpack/issues/14532">nodejs 17: digital envelope routines::unsupported #14532</a></li><li><a href="https://dtuto.com/questions/7200/opensslerrorstack">opensslErrorStack: [ ‘error:03000086:digital envelope routines::initialization error’ ]</a></li></ol><h3 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h3><p>1.对之前部署成功的提交单独创建新的分支，进行部署，依然不能成功，报错！<br>2.本地进行部署，能够打包(build)成功。<br>3.更改 <em>registry</em> 配置，恢复默认为NPM包管理下载，保证包完整性。</p>]]></content>
+    <content type="html"><![CDATA[<h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><p>使用 Jenkins 对前端进行部署时，报了一个错误。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Error: error:0308010C:digital envelope routines::unsupported</span><br><span class="line">opensslErrorStack: [ &#x27;error:03000086:digital envelope routines::initialization error&#x27; ],</span><br><span class="line">library: &#x27;digital envelope routines&#x27;,</span><br><span class="line">reason: &#x27;unsupported&#x27;,</span><br><span class="line">code: &#x27;ERR_OSSL_EVP_UNSUPPORTED&#x27;</span><br></pre></td></tr></table></figure><h3 id="解决-amp-问题"><a href="#解决-amp-问题" class="headerlink" title="解决 &amp; 问题"></a>解决 &amp; 问题</h3><ol><li><p><a href="https://github.com/webpack/webpack/issues/14532#issuecomment-947525539">webpack官方仓库讨论区</a></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">在 package.js 项目启动中添加 --openssl-legacy-provider</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">  &quot;scripts&quot;: &#123;</span><br><span class="line">    &quot;build&quot;: &quot;export NODE_OPTIONS=--openssl-legacy-provider; gatsby build&quot;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li><li><p>服务器端是否系统进行了升级，从而改变了SSL策略。<br><a href="https://stackoverflow.com/a/73064710/5719959">node: –openssl-legacy-provider is not allowed in NODE_OPTIONS</a></p></li></ol><h4 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h4><ol><li><a href="https://exerror.com/opensslerrorstack-error03000086digital-envelope-routinesinitialization-error/">[Solved] opensslErrorStack: [ ‘error:03000086:digital envelope routines::initialization error’ ]</a></li><li><a href="https://github.com/webpack/webpack/issues/14532">nodejs 17: digital envelope routines::unsupported #14532</a></li><li><a href="https://dtuto.com/questions/7200/opensslerrorstack">opensslErrorStack: [ ‘error:03000086:digital envelope routines::initialization error’ ]</a></li></ol><h3 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h3><p>1.对之前部署成功的提交单独创建新的分支，进行部署，依然不能成功，报错！<br>2.本地进行部署，能够打包(build)成功。<br>3.更改 <em>registry</em> 配置，恢复默认为NPM包管理下载，保证包完整性。</p>]]></content>
     
     
       
@@ -45,8 +69,8 @@
   
   <entry>
     <title>Typescript Pick选取 Omit排除</title>
-    <link href="http://example.com/2022/08/14/develop/Typescript-pick%E9%80%89%E5%8F%96-omit%E6%8E%92%E9%99%A4/"/>
-    <id>http://example.com/2022/08/14/develop/Typescript-pick%E9%80%89%E5%8F%96-omit%E6%8E%92%E9%99%A4/</id>
+    <link href="http://example.com/2022/08/14/develop/typescript/Typescript-pick%E9%80%89%E5%8F%96-omit%E6%8E%92%E9%99%A4/"/>
+    <id>http://example.com/2022/08/14/develop/typescript/Typescript-pick%E9%80%89%E5%8F%96-omit%E6%8E%92%E9%99%A4/</id>
     <published>2022-08-14T15:14:37.000Z</published>
     <updated>2022-08-15T15:23:41.349Z</updated>
     
@@ -68,8 +92,8 @@
   
   <entry>
     <title>Typescript 联合类型与交叉类型的区别</title>
-    <link href="http://example.com/2022/08/13/develop/Typescript-%E8%81%94%E5%90%88%E7%B1%BB%E5%9E%8B%E4%B8%8E%E4%BA%A4%E5%8F%89%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%8C%BA%E5%88%AB/"/>
-    <id>http://example.com/2022/08/13/develop/Typescript-%E8%81%94%E5%90%88%E7%B1%BB%E5%9E%8B%E4%B8%8E%E4%BA%A4%E5%8F%89%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%8C%BA%E5%88%AB/</id>
+    <link href="http://example.com/2022/08/13/develop/typescript/Typescript-%E8%81%94%E5%90%88%E7%B1%BB%E5%9E%8B%E4%B8%8E%E4%BA%A4%E5%8F%89%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%8C%BA%E5%88%AB/"/>
+    <id>http://example.com/2022/08/13/develop/typescript/Typescript-%E8%81%94%E5%90%88%E7%B1%BB%E5%9E%8B%E4%B8%8E%E4%BA%A4%E5%8F%89%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%8C%BA%E5%88%AB/</id>
     <published>2022-08-13T10:48:06.000Z</published>
     <updated>2022-08-15T11:34:20.492Z</updated>
     
@@ -93,8 +117,8 @@
   
   <entry>
     <title>React 组件类型定义的区别：JSX.Element vs ReactNode vs ReactElement</title>
-    <link href="http://example.com/2022/08/10/develop/React-%E7%BB%84%E4%BB%B6%E7%B1%BB%E5%9E%8B%E5%AE%9A%E4%B9%89%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9AJSX-Element-vs-ReactNode-vs-ReactElement/"/>
-    <id>http://example.com/2022/08/10/develop/React-%E7%BB%84%E4%BB%B6%E7%B1%BB%E5%9E%8B%E5%AE%9A%E4%B9%89%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9AJSX-Element-vs-ReactNode-vs-ReactElement/</id>
+    <link href="http://example.com/2022/08/10/develop/react/React-%E7%BB%84%E4%BB%B6%E7%B1%BB%E5%9E%8B%E5%AE%9A%E4%B9%89%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9AJSX-Element-vs-ReactNode-vs-ReactElement/"/>
+    <id>http://example.com/2022/08/10/develop/react/React-%E7%BB%84%E4%BB%B6%E7%B1%BB%E5%9E%8B%E5%AE%9A%E4%B9%89%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9AJSX-Element-vs-ReactNode-vs-ReactElement/</id>
     <published>2022-08-10T10:26:21.000Z</published>
     <updated>2022-08-15T05:48:02.620Z</updated>
     
@@ -117,8 +141,8 @@
   
   <entry>
     <title>typescript TS2532 对象可能未定义</title>
-    <link href="http://example.com/2022/08/08/develop/TypeScript-TS2532-%E5%AF%B9%E8%B1%A1%E5%8F%AF%E8%83%BD%E6%9C%AA%E5%AE%9A%E4%B9%89/"/>
-    <id>http://example.com/2022/08/08/develop/TypeScript-TS2532-%E5%AF%B9%E8%B1%A1%E5%8F%AF%E8%83%BD%E6%9C%AA%E5%AE%9A%E4%B9%89/</id>
+    <link href="http://example.com/2022/08/08/develop/typescript/TypeScript-TS2532-%E5%AF%B9%E8%B1%A1%E5%8F%AF%E8%83%BD%E6%9C%AA%E5%AE%9A%E4%B9%89/"/>
+    <id>http://example.com/2022/08/08/develop/typescript/TypeScript-TS2532-%E5%AF%B9%E8%B1%A1%E5%8F%AF%E8%83%BD%E6%9C%AA%E5%AE%9A%E4%B9%89/</id>
     <published>2022-08-08T09:32:42.000Z</published>
     <updated>2022-08-15T08:22:26.719Z</updated>
     
@@ -142,8 +166,8 @@
   
   <entry>
     <title>不能将类型&quot;Timeout&quot;分配给类型&quot;number&quot;</title>
-    <link href="http://example.com/2022/08/08/develop/Typescript%20%E4%B8%8D%E8%83%BD%E5%B0%86%E7%B1%BB%E5%9E%8B%22Timeout%22%E5%88%86%E9%85%8D%E7%BB%99%E7%B1%BB%E5%9E%8B%22number%22/"/>
-    <id>http://example.com/2022/08/08/develop/Typescript%20%E4%B8%8D%E8%83%BD%E5%B0%86%E7%B1%BB%E5%9E%8B%22Timeout%22%E5%88%86%E9%85%8D%E7%BB%99%E7%B1%BB%E5%9E%8B%22number%22/</id>
+    <link href="http://example.com/2022/08/08/develop/typescript/Typescript%20%E4%B8%8D%E8%83%BD%E5%B0%86%E7%B1%BB%E5%9E%8B%22Timeout%22%E5%88%86%E9%85%8D%E7%BB%99%E7%B1%BB%E5%9E%8B%22number%22/"/>
+    <id>http://example.com/2022/08/08/develop/typescript/Typescript%20%E4%B8%8D%E8%83%BD%E5%B0%86%E7%B1%BB%E5%9E%8B%22Timeout%22%E5%88%86%E9%85%8D%E7%BB%99%E7%B1%BB%E5%9E%8B%22number%22/</id>
     <published>2022-08-08T02:27:55.000Z</published>
     <updated>2022-08-15T08:22:20.688Z</updated>
     
@@ -170,7 +194,7 @@
     <link href="http://example.com/2022/08/01/life/2022%E5%B9%B4-%E6%8A%80%E6%9C%AF-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BB%E6%B8%85%E5%8D%95/"/>
     <id>http://example.com/2022/08/01/life/2022%E5%B9%B4-%E6%8A%80%E6%9C%AF-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BB%E6%B8%85%E5%8D%95/</id>
     <published>2022-08-01T11:06:44.000Z</published>
-    <updated>2022-08-15T08:23:26.576Z</updated>
+    <updated>2022-08-29T05:55:17.634Z</updated>
     
     <content type="html"><![CDATA[<p>更新时间 2022-08-02</p><h3 id="技术"><a href="#技术" class="headerlink" title="技术"></a>技术</h3><h4 id="进行："><a href="#进行：" class="headerlink" title="进行："></a>进行：</h4><p><a href="https://www.bilibili.com/video/BV1ev41147DQ?p=2&vd_source=7cbefa77af3d0c53bc6a9683b58ecd90">React Hook+TypeScript『业务开发思路』</a> P2<br><a href="https://www.bilibili.com/video/BV15Y4y1z7Fc?spm_id_from=333.337.search-card.all.click&vd_source=7cbefa77af3d0c53bc6a9683b58ecd90">React Hooks 精讲</a><br><a href="https://github.com/ascoders/weekly/tree/master/TS%20%E7%B1%BB%E5%9E%8B%E4%BD%93%E6%93%8D">TS 类型体操</a> 244</p><h4 id="已阅："><a href="#已阅：" class="headerlink" title="已阅："></a>已阅：</h4><p><a href="https://jkchao.github.io/typescript-book-chinese/">《深入理解 TypeScript》</a> 已阅读（1次）2022-07-30<br><a href="https://www.bilibili.com/video/BV1wR4y1377K?p=1&vd_source=7cbefa77af3d0c53bc6a9683b58ecd90">《小满TypeScript基础教程全集》</a> 已观看 (1次) 2022-08-09<br>TypeScript入门与实战 第三章 5.12 已弃 2022-8-11</p><h3 id="英文"><a href="#英文" class="headerlink" title="英文"></a>英文</h3><p>《孙志立口语课堂》 第8节 2022-08-10</p>]]></content>
     
