@@ -140,6 +140,20 @@
   </url>
   
   <url>
+    <loc>http://example.com/tags/typescript/</loc>
+    <lastmod>2022-08-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/tags/typescript%E6%8A%A5%E9%94%99/</loc>
+    <lastmod>2022-08-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://example.com/tags/node/</loc>
     <lastmod>2022-08-30</lastmod>
     <changefreq>weekly</changefreq>
@@ -162,20 +176,6 @@
   
   <url>
     <loc>http://example.com/tags/%E6%B8%85%E5%8D%95/</loc>
-    <lastmod>2022-08-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/tags/typescript/</loc>
-    <lastmod>2022-08-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/tags/typescript%E6%8A%A5%E9%94%99/</loc>
     <lastmod>2022-08-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
