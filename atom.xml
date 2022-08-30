@@ -218,15 +218,14 @@
     <link href="http://example.com/2022/08/01/life/2022%E5%B9%B4-%E6%8A%80%E6%9C%AF-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BB%E6%B8%85%E5%8D%95/"/>
     <id>http://example.com/2022/08/01/life/2022%E5%B9%B4-%E6%8A%80%E6%9C%AF-%E5%AD%A6%E4%B9%A0%E9%98%85%E8%AF%BB%E6%B8%85%E5%8D%95/</id>
     <published>2022-08-01T11:06:44.000Z</published>
-    <updated>2022-08-29T05:55:17.634Z</updated>
+    <updated>2022-08-30T04:39:24.305Z</updated>
     
-    <content type="html"><![CDATA[<p>更新时间 2022-08-02</p><h3 id="技术"><a href="#技术" class="headerlink" title="技术"></a>技术</h3><h4 id="进行："><a href="#进行：" class="headerlink" title="进行："></a>进行：</h4><p><a href="https://www.bilibili.com/video/BV1ev41147DQ?p=2&vd_source=7cbefa77af3d0c53bc6a9683b58ecd90">React Hook+TypeScript『业务开发思路』</a> P2<br><a href="https://www.bilibili.com/video/BV15Y4y1z7Fc?spm_id_from=333.337.search-card.all.click&vd_source=7cbefa77af3d0c53bc6a9683b58ecd90">React Hooks 精讲</a><br><a href="https://github.com/ascoders/weekly/tree/master/TS%20%E7%B1%BB%E5%9E%8B%E4%BD%93%E6%93%8D">TS 类型体操</a> 244</p><h4 id="已阅："><a href="#已阅：" class="headerlink" title="已阅："></a>已阅：</h4><p><a href="https://jkchao.github.io/typescript-book-chinese/">《深入理解 TypeScript》</a> 已阅读（1次）2022-07-30<br><a href="https://www.bilibili.com/video/BV1wR4y1377K?p=1&vd_source=7cbefa77af3d0c53bc6a9683b58ecd90">《小满TypeScript基础教程全集》</a> 已观看 (1次) 2022-08-09<br>TypeScript入门与实战 第三章 5.12 已弃 2022-8-11</p><h3 id="英文"><a href="#英文" class="headerlink" title="英文"></a>英文</h3><p>《孙志立口语课堂》 第8节 2022-08-10</p>]]></content>
+    <content type="html"><![CDATA[<h3 id="技术"><a href="#技术" class="headerlink" title="技术"></a>技术</h3><h4 id="进行："><a href="#进行：" class="headerlink" title="进行："></a>进行：</h4><p><a href="https://www.bilibili.com/video/BV1ev41147DQ?p=2&vd_source=7cbefa77af3d0c53bc6a9683b58ecd90">React Hook+TypeScript『业务开发思路』</a><br><a href="https://www.bilibili.com/video/BV15Y4y1z7Fc?spm_id_from=333.337.search-card.all.click&vd_source=7cbefa77af3d0c53bc6a9683b58ecd90">React Hooks 精讲</a><br><a href="https://github.com/type-challenges/type-challenges/blob/main/README.zh-CN.md">Type Challenges</a><br><a href="https://github.com/ascoders/weekly/tree/master/TS%20%E7%B1%BB%E5%9E%8B%E4%BD%93%E6%93%8D">Type Challenges 精读</a> </p><h4 id="已阅："><a href="#已阅：" class="headerlink" title="已阅："></a>已阅：</h4><p><a href="https://jkchao.github.io/typescript-book-chinese/">《深入理解 TypeScript》</a><br><a href="https://www.bilibili.com/video/BV1wR4y1377K?p=1&vd_source=7cbefa77af3d0c53bc6a9683b58ecd90">《小满TypeScript基础教程全集》</a><br>TypeScript入门与实战 第三章 5.12 已弃 </p><h3 id="英文"><a href="#英文" class="headerlink" title="英文"></a>英文</h3><p>《孙志立口语课堂》</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;更新时间 2022-08-02&lt;/p&gt;
-&lt;h3 id=&quot;技术&quot;&gt;&lt;a href=&quot;#技术&quot; class=&quot;headerlink&quot; title=&quot;技术&quot;&gt;&lt;/a&gt;技术&lt;/h3&gt;&lt;h4 id=&quot;进行：&quot;&gt;&lt;a href=&quot;#进行：&quot; class=&quot;headerlink&quot; tit</summary>
+    <summary type="html">&lt;h3 id=&quot;技术&quot;&gt;&lt;a href=&quot;#技术&quot; class=&quot;headerlink&quot; title=&quot;技术&quot;&gt;&lt;/a&gt;技术&lt;/h3&gt;&lt;h4 id=&quot;进行：&quot;&gt;&lt;a href=&quot;#进行：&quot; class=&quot;headerlink&quot; title=&quot;进行：&quot;&gt;&lt;/a&gt;进行：&lt;/h4&gt;&lt;p</summary>
       
     
     
@@ -259,9 +258,9 @@
     <category term="javascript" scheme="http://example.com/categories/javascript/"/>
     
     
-    <category term="javascript" scheme="http://example.com/tags/javascript/"/>
-    
     <category term="node" scheme="http://example.com/tags/node/"/>
+    
+    <category term="javascript" scheme="http://example.com/tags/javascript/"/>
     
     <category term="npm" scheme="http://example.com/tags/npm/"/>
     
